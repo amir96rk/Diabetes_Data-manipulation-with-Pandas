@@ -24,5 +24,3 @@ def proportion_of_weight_range():
                     "Overweight range":len(over_weight)/df_lenght,
                     "Obese range":len(obese)/df_lenght}
         return output_dic
-
-proportion_of_weight_range()
