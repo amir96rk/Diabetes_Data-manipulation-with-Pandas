@@ -1,5 +1,5 @@
 # In this function, we want to get the average bmi of the people with diabetes and without diabetes
-def average_bmi_compare():
+def average_bmi_groups():
         import pandas as pd
         #load dataset
         df = pd.read_csv('diabetes_prediction_dataset.csv')
@@ -17,7 +17,7 @@ def average_bmi_compare():
         non_dia_ave = non_diabetics['bmi'].fillna(0).mean()
         
         
-        output = 'Average BMI index of people with diabetes is {0:.4f} and without diabetes is {0:.4f}'.format(dia_ave , non_dia_ave)
+        output = 'Average BMI index of people with diabetes is {0:.4f} and without diabetes is {1:.4f}'.format(dia_ave,non_dia_ave)
         
         return output
-        
+        #returns : 'Average BMI index of people with diabetes is 31.9884 and without diabetes is 26.8872'
