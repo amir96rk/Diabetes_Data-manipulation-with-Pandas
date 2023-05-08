@@ -12,9 +12,9 @@ def average_bmi_groups():
         non_diabetics = df[df['diabetes'] == 0]
         
         #get average bmi of the groups
-        #fillna() is used to replace any possible missing values to 0
-        dia_ave = diabetics['bmi'].fillna(0).mean()
-        non_dia_ave = non_diabetics['bmi'].fillna(0).mean()
+        #fillna() is used to drop any NaN values
+        dia_ave = diabetics['bmi'].dropna().mean()
+        non_dia_ave = non_diabetics['bmi'].dropna().mean()
         
         
         output = 'Average BMI index of people with diabetes is {0:.4f} and without diabetes is {1:.4f}'.format(dia_ave,non_dia_ave)
