@@ -12,7 +12,7 @@ def average_bmi_groups():
         non_diabetics = df[df['diabetes'] == 0]
         
         #get average bmi of the groups
-        #fillna() is used to drop any NaN values
+        #dropna() is used to drop any NaN values
         dia_ave = diabetics['bmi'].dropna().mean()
         non_dia_ave = non_diabetics['bmi'].dropna().mean()
         
